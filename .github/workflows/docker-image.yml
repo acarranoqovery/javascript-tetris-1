@@ -1,0 +1,21 @@
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy on Qovery
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Deploy on Qovery
+        uses: Qovery/qovery-action@main
+        id: qovery
+        with:
+          qovery-organization-id: "1293912y31321"
+          qovery-project-id: "1293912y31321"
+          qovery-environment-id: "1293912y31321"
+          qovery-application-ids: "1293912y31321" # Comma-separated UUID (case sensitive)
+          qovery-application-commit-id: "1293912y31321"
+          qovery-api-token: "1293912y31321"
+          qovery-container-ids: "1293912y31321"
+          qovery-container-tags: "1293912y31321"
